@@ -1,0 +1,60 @@
+{
+  "version": "1.0.0",
+  "mode": "controlled-autonomy",
+  "status": "validated",
+  "principles": [
+    "one-next-action",
+    "evidence-before-success",
+    "human-approval-for-external-effects",
+    "no-unbounded-self-modification"
+  ],
+  "active_goal": "Estabelecer a base operacional verificável do AEON 1.0",
+  "last_validation": {
+    "ok": true,
+    "errors": [],
+    "evidence": [
+      "state-file-readable",
+      "required-fields-present",
+      "langgraph-node-executed"
+    ],
+    "correction": {
+      "passed": false,
+      "applied": false,
+      "reason": "human approval required for mutation"
+    }
+  },
+  "components": {
+    "langgraph": {
+      "status": "installed",
+      "version": "1.2.11"
+    },
+    "mem0ai": {
+      "status": "validated",
+      "version": "2.0.18",
+      "reason": "Ollama local + Qdrant local; gravação e busca validadas"
+    },
+    "ruff": {
+      "status": "installed",
+      "version": "0.16.3"
+    },
+    "promptfoo": {
+      "status": "validated",
+      "version": "0.122.0",
+      "reason": "CLI funcionando; smoke tests precisam de ajustes de expectativa"
+    },
+    "langfuse": {
+      "status": "validated",
+      "version": "Docker local",
+      "reason": "traces reais enviados ao projeto AEON Operação"
+    },
+    "openlit": {
+      "status": "not_adopted",
+      "reason": "sobreposição com Langfuse; manter como alternativa futura"
+    },
+    "temporal": {
+      "status": "deferred",
+      "reason": "LangGraph + checkpoints cobrem o estágio atual; avaliar quando houver processos distribuídos longos"
+    }
+  },
+  "next_action": "Conectar eventos reais ao status público sem expor credenciais"
+}
