@@ -1,0 +1,11 @@
+**/node_modules/
+**/.env
+**/*.sqlite
+**/*.db
+**/qdrant*/
+**/chroma*/
+**/aeon_memory.json
+**/dist/
+.venv/
+__pycache__/
+
