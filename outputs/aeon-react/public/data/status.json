@@ -1,0 +1,15 @@
+{
+  "updated_at": "2026-08-17T00:00:00-03:00",
+  "status": "validated",
+  "next_action": "Usar o dashboard como painel diário e ajustar os smoke tests do Promptfoo",
+  "validation": ["state-file-readable", "required-fields-present", "langgraph-node-executed"],
+  "components": {
+    "langgraph": {"status": "active", "label": "LangGraph", "role": "orquestração persistente"},
+    "mem0": {"status": "active", "label": "Mem0", "role": "memória local com Ollama + Qdrant"},
+    "langfuse": {"status": "active", "label": "Langfuse", "role": "traces e observabilidade"},
+    "promptfoo": {"status": "active", "label": "Promptfoo", "role": "testes de prompts"},
+    "ruff": {"status": "active", "label": "Ruff", "role": "qualidade Python"},
+    "openlit": {"status": "planned", "label": "OpenLIT", "role": "alternativa de observabilidade"},
+    "temporal": {"status": "planned", "label": "Temporal", "role": "processos longos"}
+  }
+}
