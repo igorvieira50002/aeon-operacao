@@ -1,4 +1,5 @@
 name: Deploy AEON dashboard
+# Pages source is configured for GitHub Actions.
 
 on:
   push:
