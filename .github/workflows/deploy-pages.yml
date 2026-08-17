@@ -31,6 +31,9 @@ jobs:
       - name: Build dashboard
         working-directory: outputs/aeon-react
         run: npm run build
+      - name: Validate public operational data
+        working-directory: outputs/aeon-react
+        run: node -e "JSON.parse(require('fs').readFileSync('public/data/status.json')); JSON.parse(require('fs').readFileSync('public/data/history.json')); console.log('operational data valid')"
       - uses: actions/upload-pages-artifact@v3
         with:
           path: outputs/aeon-react/dist
